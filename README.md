@@ -7,18 +7,6 @@ Personal project of [Dmitriy Oskarov](http://frontendfrontier.com/)
 
 ---
 
-Technology stack:
-
-* nope
-
----
-
-### Attention
-
-new project
-
----
-
 ### Description
 
 new project
@@ -36,6 +24,11 @@ new project
 ### Installing
 
 1. clone
+2. yarn install
+3. npm run build
+4. open extensions in google chrome
+5. turn on developer mod
+6. add extansion 
 
 ---
 

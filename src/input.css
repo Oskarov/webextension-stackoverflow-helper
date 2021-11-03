@@ -10,8 +10,10 @@ button {
     border-radius: 3px;
     font-family: monospace;
     cursor: pointer;
+    opacity: 0.3;
 }
 
 button:hover {
     background: greenyellow;
+    opacity: 1;
 }

@@ -1,3 +1,5 @@
+import {COPY_ALL} from "./types";
+
 const preEls: NodeListOf<HTMLPreElement> = document.querySelectorAll('pre');
 import './input.css';
 
@@ -19,16 +21,33 @@ preEls.forEach(el => {
     button.addEventListener('click', (e) => {
         if (!!code?.innerText) {
             navigator.clipboard.writeText(code.innerText).then(() => {
-              notify();
+                notify();
             });
         }
     });
 });
 
-chrome.runtime.onMessage.addListener((req, ...other)=>{
-    
+chrome.runtime.onMessage.addListener((req, info, cb): boolean => {
+    console.log(cb)
+    if (req.action === COPY_ALL) {
+        const allCode = getAllCode();
+        navigator.clipboard.writeText(allCode).then(() => {
+            notify();
+            cb(allCode);
+        });
+        return true;
+    }
+    return false;
 })
 
+const getAllCode = () => {
+    const allCode: string[] = [];
+    preEls.forEach(el => {
+        const selector = el.querySelector('code');
+        if (selector) allCode.push(selector.innerText);
+    })
+    return allCode.join('');
+}
 
 const notify = () => {
     const scriptEl = document.createElement('script');
