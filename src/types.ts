@@ -1,0 +1,1 @@
+export const COPY_ALL = 'copy-all'
