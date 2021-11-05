@@ -19,6 +19,7 @@
     "parcel-plugin-web-ext-tool": "^0.2.2",
     "typescript": "^4.4.4",
     "web-ext": "^6.5.0",
+    "webextension-polyfill": "^0.8.0",
     "webextension-polyfill-ts": "^0.26.0"
   },
   "devDependencies": {

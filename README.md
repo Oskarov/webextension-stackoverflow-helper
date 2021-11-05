@@ -28,7 +28,7 @@ new project
 3. npm run build
 4. open extensions in google chrome
 5. turn on developer mod
-6. add extansion 
+6. add extension from root folder of project
 
 ---
 
