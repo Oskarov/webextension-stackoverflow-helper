@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "parcel build src/input.ts --experimental-scope-hoisting --no-source-maps --public-url ./",
+    "build": "parcel build src/*.ts --experimental-scope-hoisting --no-source-maps --public-url ./",
     "watch": "parcel watch src/*.ts --public-url ./"
   },
   "dependencies": {
